@@ -5,9 +5,9 @@ import streamlit as st
 
 st.title("Data Analysis Dashboard")
 
-hours_df = pd.read_csv(r"Dashboard/hour.csv")
+hours_df = pd.read_csv("Dashboard/hour.csv")
 hours_group = hours_df.groupby(by="hr").cnt.mean()
-days_df = pd.read_csv(r"Dashboard/day.csv")
+days_df = pd.read_csv("Dashboard/day.csv")
 
 st.subheader("Data Preview - hour")
 st.write(hours_df.head())
