@@ -1,4 +1,3 @@
-#!/usr/bin/env python@3.10
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -6,9 +5,9 @@ import streamlit as st
 
 st.title("Data Analysis Dashboard")
 
-hours_df = pd.read_csv("hour.csv")
+hours_df = pd.read_csv(r"Dashboard/hour.csv")
 hours_group = hours_df.groupby(by="hr").cnt.mean()
-days_df = pd.read_csv("day.csv")
+days_df = pd.read_csv(r"Dashboard/day.csv")
 
 st.subheader("Data Preview - hour")
 st.write(hours_df.head())
